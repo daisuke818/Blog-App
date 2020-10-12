@@ -13,12 +13,14 @@
             {{ session('status') }}
           </div>
           @endif
-          <form action="{{ route('contact.create' )}}" method="get">
-            <button type="submit" class="btn btn-primary">
-              新規登録
-            </button>
-          </form>
-          indexです
+
+          createです
+          <form method="" action="">
+            氏名
+            <input type="text" name="your_name">
+            <br>
+            件名
+            <input type="text" name="" id="">
         </div>
       </div>
     </div>
