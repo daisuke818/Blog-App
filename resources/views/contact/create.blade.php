@@ -14,6 +14,16 @@
           </div>
           @endif
 
+          @if ($errors->any())
+          <div class="alert alert-danger">
+            <ul>
+              @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+              @endforeach
+            </ul>
+          </div>
+          @endif
+
           createです
           <form method="POST" action="{{route('contact.store')}}">
             @csrf
@@ -35,7 +45,8 @@
             <br>
             年齢
             <select name="age">
-              <option value="1">選択してください</option>
+              <option value="">選択してください</option>
+              <option value="1">〜19歳</option>
               <option value="2">20歳〜29歳</option>
               <option value="3">30歳〜39歳</option>
               <option value="4">40歳〜49歳</option>
